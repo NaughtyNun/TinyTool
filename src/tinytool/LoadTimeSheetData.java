@@ -56,7 +56,7 @@ public class LoadTimeSheetData {
       }
 
       // populate non-billable items
-      list = dom.getElementsByTagName("nonBilling");
+      list = dom.getElementsByTagName("nonBillable");
       for (int i=0; i<list.getLength(); i++) {
         node = list.item(i);
 

@@ -87,8 +87,8 @@ public class TmsController implements Initializable {
     String xmlName = personnelRecord.getPersonnelNumber() + "_D" + lblDate.getText() + ".xml";
     xmlName = xmlName.replace("-", "");
     File xmlFile = new File(personnelRecord.getTimeSheetLocal() + "\\" + xmlName);
-    fileName = personnelRecord.getPersonnelNumber() + " " + personnelRecord.getSurname() +
-      personnelRecord.getName().charAt(0) + " TS.pdf";
+    fileName = personnelRecord.getPersonnelNumber() + " " + personnelRecord.getSurname() + " " +
+      personnelRecord.getName().charAt(0) + " - TS.pdf";
     pdfFile = new File(tinyTool.WORKDIR + fileName);
     copyFile = new File(personnelRecord.getTimeSheetCopy() + "\\" + fileName);
 
