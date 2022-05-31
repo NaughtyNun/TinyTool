@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="370.0" minWidth="650.0" prefHeight="370.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea editable="false" layoutX="-78.0" layoutY="57.0" text="A weekend coding project, from something very simple (Split &amp; Merge of PDF Documents from the &#10;command line) to building a GUI application with a search facility and then, because of way too many &#10;calls regarding Adobe Acrobat, the ability to generate Security Declarations to Time Sheets was &#10;developed. Having a more complete tool (and some calls regarding FTP) a FTP client was also built. &#10;TinyTool was mainly created to make ordinary tasks that was causing both frustration and time lost much&#10;easier and way faster.  &#10;&#10;I have to thank all the people using TinyTool for their suggestions, from ‘oh, this would be nice' to&#10;some suggestions (resulting in REALLY BIG changes) that added to the functionality and therefore a &#10;more robust usable tool. &#10;&#10;Not being a JAVA guru at all, the following companies needs to be thanked as well:&#10;    The Apache Foundation (POI libraries, PDFBox library and Xmlbeans library)&#10;    iText (openPDF library)&#10;    E-IceBlue (Spire libraries)&#10;    all the help I got from separate authors of some of these libraries&#10;    all the help from GitHub and their HUGE amount of patience and understanding&#10;    all the willing (and unwilling) testers that I roped in from BCX (SITA Site)" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextArea>
+   </children>
+</AnchorPane>

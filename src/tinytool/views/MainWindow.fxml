@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tinytool.controllers.MainWindowController">
+   <Text fill="WHITE" layoutX="195.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TinyTool" textAlignment="CENTER" wrappingWidth="410.787109375" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="300.0">
+      <font>
+         <Font name="Century Gothic Bold" size="96.0" />
+      </font>
+   </Text>
+  <MenuBar layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <Menu text="PDF Tools">
+      <MenuItem onAction="#handleSplit" text="Split Documents" />
+      <MenuItem onAction="#handleMerge" text="Merge Documents" />
+      <SeparatorMenuItem mnemonicParsing="false" />
+         <MenuItem mnemonicParsing="false" onAction="#handleInformation" text="Setup Information" />
+      <MenuItem onAction="#handleClear" text="Clear Work Directory" />
+      <MenuItem onAction="#handleExit" text="Exit TinyTool" />
+    </Menu>
+    <Menu mnemonicParsing="false" text="Document Tools">
+      <MenuItem mnemonicParsing="false" onAction="#handleSearch" text="Search Documents" />
+         <MenuItem mnemonicParsing="false" onAction="#handleDeclaration" text="Security Declaration" />
+         <MenuItem mnemonicParsing="false" onAction="#handleTimeSheet" text="Time Sheets" />
+         <MenuItem disable="true" mnemonicParsing="false" text="Attendance Register" />
+    </Menu>
+    <Menu mnemonicParsing="false" text="File Tools">
+         <MenuItem disable="true" mnemonicParsing="false" text="File Transfer (FTP)" />
+      <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+    </Menu>
+  </MenuBar>
+   <ButtonBar layoutX="997.0" layoutY="646.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0">
+      <buttons>
+         <Button fx:id="btnSplit" accessibleHelp="Split PDF Documents" accessibleText="Split PDF Documents" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#buttonSplit" prefHeight="60.0" prefWidth="60.0">
+            <graphic>
+              <ImageView accessibleHelp="Split PDF Documents" accessibleRole="BUTTON" accessibleText="Split PDF Documents" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                <effect>
+                  <Glow />
+                </effect>
+                <Image url="@../../resources/split64.png" />
+              </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="btnMerge" accessibleHelp="Split PDF Documents" accessibleText="Split PDF Documents" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#buttonMerge" prefHeight="60.0" prefWidth="60.0">
+            <graphic>
+              <ImageView accessibleHelp="Merge PDF Documents" accessibleRole="BUTTON" accessibleText="Merge PDF Documents" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                <effect>
+                  <Glow />
+                </effect>
+                <Image url="@../../resources/merge64.png" />
+              </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="btnSearch" accessibleHelp="Search Documents" accessibleText="Search Documents" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#buttonSearch" prefHeight="60.0" prefWidth="60.0">
+            <graphic>
+              <ImageView accessibleHelp="Search Documents" accessibleRole="BUTTON" accessibleText="Search Documents" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                <effect>
+                  <Glow />
+                </effect>
+                <Image url="@../../resources/search64.png" />
+              </ImageView>
+            </graphic>
+         </Button>
+      </buttons>
+   </ButtonBar>
+</AnchorPane>

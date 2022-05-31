@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tinytool.controllers.InfoWindowController">
+   <children>
+      <TabPane prefHeight="410.0" prefWidth="610.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabEmployee" text="Employee Information">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="10.0" prefHeight="17.0" prefWidth="120.0" text="Your Information" textAlignment="CENTER" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="39.0" text="Personnel Number" />
+                        <TextField fx:id="textPersonnelNumber" layoutX="136.0" layoutY="35.0" prefHeight="25.0" prefWidth="117.0" promptText="personnel number" />
+                        <Label layoutX="305.0" layoutY="39.0" text="ID Number" />
+                        <TextField fx:id="textIdNumber" layoutX="385.0" layoutY="35.0" prefHeight="25.0" prefWidth="175.0" promptText="RSA ID Number" />
+                        <Label layoutX="20.0" layoutY="71.0" text="Surname" />
+                        <TextField fx:id="textSurname" layoutX="136.0" layoutY="67.0" promptText="your surname" />
+                        <Label layoutX="305.0" layoutY="71.0" text="Name" />
+                        <TextField fx:id="textName" layoutX="356.0" layoutY="67.0" prefHeight="25.0" prefWidth="205.0" promptText="your first name" />
+                        <Label layoutX="20.0" layoutY="103.0" text="Email Address" />
+                        <TextField fx:id="textEmail" layoutX="136.0" layoutY="99.0" prefHeight="25.0" prefWidth="425.0" promptText="your work email address" />
+                        <Label layoutX="20.0" layoutY="135.0" text="Line Manager Information" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="169.0" text="Surname" />
+                        <TextField fx:id="textFmSurname" layoutX="136.0" layoutY="165.0" promptText="line manager surname" />
+                        <Label layoutX="305.0" layoutY="169.0" text="Name" />
+                        <TextField fx:id="textFmName" layoutX="356.0" layoutY="165.0" prefHeight="25.0" prefWidth="205.0" promptText="line manager first name" />
+                        <Label layoutX="20.0" layoutY="200.0" text="Email Address" />
+                        <TextField fx:id="textFmEmail" layoutX="136.0" layoutY="196.0" prefHeight="25.0" prefWidth="425.0" promptText="line manager work email address" />
+                        <Label layoutX="20.0" layoutY="235.0" text="Manager Information" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="267.0" text="Surname" />
+                        <TextField fx:id="textOneUpSurname" layoutX="136.0" layoutY="263.0" promptText="manager surname" />
+                        <Label layoutX="305.0" layoutY="267.0" text="Name" />
+                        <TextField fx:id="textOneUpName" layoutX="356.0" layoutY="263.0" prefHeight="25.0" prefWidth="206.0" promptText="manager first name" />
+                        <Label layoutX="20.0" layoutY="303.0" text="Email Address" />
+                        <TextField fx:id="textOneUpEmail" layoutX="136.0" layoutY="299.0" prefHeight="25.0" prefWidth="425.0" promptText="manager work email address" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabSignatories" text="Signatories">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblSignature" layoutX="14.0" layoutY="25.0" text="Your Signature" />
+                        <Label layoutX="14.0" layoutY="70.0" text="Your Initial" />
+                        <ImageView fx:id="imgSignature" fitHeight="35.0" fitWidth="200.0" layoutX="165.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgInitial" fitHeight="35.0" fitWidth="80.0" layoutX="165.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="14.0" layoutY="141.0" text="Line Manager Signature" />
+                        <Label layoutX="14.0" layoutY="182.0" text="Line Manager Initial" />
+                        <Label layoutX="14.0" layoutY="254.0" text="Manager Signature" />
+                        <Label layoutX="14.0" layoutY="303.0" text="Manager Initial" />
+                        <ImageView fx:id="imgFmSignature" fitHeight="35.0" fitWidth="200.0" layoutX="165.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgFmInitial" fitHeight="35.0" fitWidth="80.0" layoutX="165.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgOneUpSignature" fitHeight="35.0" fitWidth="200.0" layoutX="165.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgOneUpInitial" fitHeight="35.0" fitWidth="80.0" layoutX="165.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="buttonSignature" layoutX="528.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleSignature" text="Choose" />
+                        <Button fx:id="buttonInitial" layoutX="528.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleInitial" text="Choose" />
+                        <Button layoutX="528.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleManagerSignature" text="Choose" />
+                        <Button layoutX="528.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleManagerInitial" text="Choose" />
+                        <Button layoutX="528.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleOneUpSignature" text="Choose" />
+                        <Button layoutX="528.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleOneUpInitial" text="Choose" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabLocations" text="Other Information">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="30.0" text="Default working directory" />
+                        <Label layoutX="14.0" layoutY="69.0" text="Security Declarations" />
+                        <Label layoutX="14.0" layoutY="109.0" text="Time Sheet (data file)" />
+                        <Label layoutX="14.0" layoutY="149.0" text="Time Sheet (copy)" />
+                        <Label layoutX="16.0" layoutY="189.0" text="Attendance Register" />
+                        <Label fx:id="labelWorkDirectory" layoutX="175.0" layoutY="30.0" text="Label" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textDeclarations" layoutX="175.0" layoutY="65.0" prefHeight="25.0" prefWidth="403.0" promptText="location where declarations are saved" />
+                        <TextField fx:id="textTimeData" layoutX="175.0" layoutY="105.0" prefHeight="25.0" prefWidth="403.0" promptText="location where time sheet data file is stored" />
+                        <TextField fx:id="textTimeCopy" layoutX="175.0" layoutY="145.0" prefHeight="25.0" prefWidth="403.0" promptText="location to where you would like to save your time sheet" />
+                        <TextField fx:id="textRegister" layoutX="175.0" layoutY="185.0" prefHeight="25.0" prefWidth="403.0" promptText="location to where you would like to save your attendance register" />
+                        <Label layoutX="16.0" layoutY="235.0" text="Client Surname" />
+                        <Label layoutX="296.0" layoutY="235.0" text="Client Name" />
+                        <Label layoutX="16.0" layoutY="270.0" text="Client Email" />
+                        <TextField fx:id="textClientSurname" layoutX="116.0" layoutY="231.0" prefHeight="25.0" prefWidth="168.0" promptText="surname of your client" />
+                        <TextField fx:id="textClientName" layoutX="381.0" layoutY="231.0" prefHeight="25.0" prefWidth="195.0" promptText="first name of your client" />
+                        <TextField fx:id="textClientEmail" layoutX="116.0" layoutY="266.0" prefHeight="25.0" prefWidth="460.0" promptText="email address of your client" />
+                        <Label layoutX="14.0" layoutY="306.0" text="System ID" />
+                        <TextField fx:id="textSystemId" layoutX="116.0" layoutY="302.0" promptText="your system id" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="buttonAccept" mnemonicParsing="false" onAction="#handleAccept" prefHeight="25.0" prefWidth="70.0" text="Accept" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="90.0" />
+      <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="70.0" text="Cancel" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>

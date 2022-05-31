@@ -1,0 +1,10 @@
+<component name="CopyrightManager">
+  <settings default="tinytool">
+    <module2copyright>
+      <element module="All" copyright="tinytool" />
+    </module2copyright>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="prefixLines" value="false" />
+    </LanguageOptions>
+  </settings>
+</component>
