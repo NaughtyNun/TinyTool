@@ -17,11 +17,13 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.apache.commons.io.FileUtils;
 import tinytool.*;
 import tinytool.models.PersonnelRecord;
 import tinytool.models.TmsRecord;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
@@ -33,9 +35,10 @@ public class TmsController implements Initializable {
   private final CreateTimeSheet timeSheet = new CreateTimeSheet();
   private final Utilities utilities = new Utilities();
   private final TinyTool tinyTool = new TinyTool();
+  private final TmsRecord timeRecord = new TmsRecord();
   private PersonnelRecord personnelRecord = new PersonnelRecord();
-  private TmsRecord timeRecord = new TmsRecord();
-  private File xmlPersonnel;
+  private File pdfFile;
+  private File copyFile;
   private Stage stage;
 
   @FXML private DatePicker datePicker;
@@ -49,7 +52,7 @@ public class TmsController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    xmlPersonnel = new File(tinyTool.HOMEDIR + "\\personnel.xml");
+    File xmlPersonnel = new File(tinyTool.HOMEDIR + "\\personnel.xml");
     if (xmlPersonnel.exists() && !xmlPersonnel.isDirectory()) {
       personnelRecord = loadPersonnelRecord.loadPersonnelRecord(xmlPersonnel);
 
@@ -80,14 +83,19 @@ public class TmsController implements Initializable {
   }
 
   @FXML void handleGenerate() {
+    String fileName;
     String xmlName = personnelRecord.getPersonnelNumber() + "_D" + lblDate.getText() + ".xml";
     xmlName = xmlName.replace("-", "");
     File xmlFile = new File(personnelRecord.getTimeSheetLocal() + "\\" + xmlName);
+    fileName = personnelRecord.getPersonnelNumber() + " " + personnelRecord.getSurname() +
+      personnelRecord.getName().charAt(0) + " TS.pdf";
+    pdfFile = new File(tinyTool.WORKDIR + fileName);
+    copyFile = new File(personnelRecord.getTimeSheetCopy() + "\\" + fileName);
 
     if (loadTimeSheetData.loadData(xmlFile, timeRecord)) {
       lblFeedback.setText("Loaded XML data file");
 
-      if (timeSheet.createDocument(personnelRecord, timeRecord, new File("demo.pdf"))) {
+      if (timeSheet.createDocument(personnelRecord, timeRecord, pdfFile)) {
         lblFeedback.setText("TimeSheet created successfully");
         btnGenerate.setDisable(true);
         btnCopy.setDisable(false);
@@ -96,7 +104,14 @@ public class TmsController implements Initializable {
   }
 
   @FXML void handleCopy() {
-    System.out.println("to do");
+    try {
+      FileUtils.copyFile(pdfFile, copyFile);
+      lblFeedback.setText("File copied successfully");
+      btnCopy.setDisable(true);
+    } catch (IOException e) {
+      utilities.showFieldError("Declaration Copy", "The timesheet could not be copied to the " +
+        "destination folder.\n" + "Error: " + e.getMessage());
+    }
   }
 
   @FXML void handleExit() {

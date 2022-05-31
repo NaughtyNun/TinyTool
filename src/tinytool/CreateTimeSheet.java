@@ -30,7 +30,6 @@ public class CreateTimeSheet {
   private final Utilities utilities = new Utilities();
   private final TinyTool tinyTool = new TinyTool();
   private final File template = new File(tinyTool.HOMEDIR + "\\timesheet.xlsx");
-  private final LocalDate date = LocalDate.now();
   private PersonnelRecord record = new PersonnelRecord();
   private TmsRecord timeRecord = new TmsRecord();
   private File tempFile = null;
@@ -48,7 +47,9 @@ public class CreateTimeSheet {
   }
 
   private boolean createTempFile() {
+    LocalDate date = LocalDate.now();
     tempFile = new File(tinyTool.WORKDIR + "time_temp_" + date + "_.xlsx");
+
     try {
       FileUtils.copyFile(template, tempFile);
       return true;
