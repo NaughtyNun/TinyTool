@@ -5,7 +5,7 @@
 
   @notes   TMS Record class, will be used to read XML file sent from the TMS system
   @changes -
- */
+*/
 
 package tinytool.models;
 

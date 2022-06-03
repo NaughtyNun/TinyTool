@@ -8,13 +8,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="pdftools" level="application" />
-    <orderEntry type="library" name="common" level="application" />
     <orderEntry type="library" name="commons" level="application" />
     <orderEntry type="library" name="openpdf" level="application" />
     <orderEntry type="library" name="pdfbox" level="application" />
     <orderEntry type="library" name="poi" level="application" />
     <orderEntry type="library" name="xmlbeans" level="application" />
     <orderEntry type="library" name="Spire" level="application" />
+    <orderEntry type="library" name="ftp" level="application" />
   </component>
 </module>
